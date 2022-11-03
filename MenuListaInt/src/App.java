@@ -9,7 +9,6 @@ public class App {
         String menu[] = { "0. Salir", "1. Generar Array", "2. Mostrar Array", "3. Mostrar Array invertido",
                 "4. Ordenar Array", "5. Buscar Valor", "6. Sustituir valor", "7. Alternar posiciones" };
         Lista listaOriginal = new Lista(1);
-        Lista listaActual;
         Menu miMenu = new Menu(menu);
 
         do {
@@ -45,8 +44,19 @@ public class App {
                     }
                 }
                 case 2 -> {
+                    System.out.println("Estos son los elementos de tu array:\n");
                     System.out.println(listaOriginal.toString(false));
+                    System.out.println("\n");
 
+                }
+                case 3 -> {
+                    System.out.println("Estos son los elementos de tu array en orden inverso:\n");
+                    System.out.println(listaOriginal.toString(true));
+                    System.out.println("\n");
+
+                }
+                case 4 -> {
+                    System.out.println(listaOriginal.ordena(listaOriginal).toString(false));
                 }
             }
         } while (opcion != 0);
